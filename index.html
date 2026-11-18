@@ -1,11 +1,3 @@
-<?php
-$message = "";
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $message = "Bedankt! Je bericht is ontvangen.";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -88,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             <span></span>
                             <span></span>
                             <span></span>
-                            <small>software.php</small>
+                            <small>software.js</small>
                         </div>
 
                         <div class="code-content">
@@ -151,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <h3>Programmeren</h3>
                     <p>
                         Leer werken met programmeertalen zoals
-                        Python, PHP en C#.
+                        Python, JavaScript en C#.
                     </p>
                 </article>
 
@@ -160,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <h3>Web Development</h3>
                     <p>
                         Bouw moderne websites met HTML, CSS,
-                        JavaScript en PHP.
+                        JavaScript.
                     </p>
                 </article>
 
@@ -207,7 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                     <p>
                         Maak een responsive website met HTML,
-                        CSS en PHP.
+                        CSS.
                     </p>
 
                     <button class="project-button" data-project="web">
@@ -397,13 +389,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     Laat een bericht achter.
                 </p>
 
-                <?php if ($message !== ""): ?>
-                    <div class="success-message">
-                        <?= htmlspecialchars($message) ?>
-                    </div>
-                <?php endif; ?>
+                <p>
+                    Je e-mailprogramma wordt geopend zodat je de vraag kunt versturen.
+                    Liever rechtstreeks mailen? <a href="mailto:nikiperetz10@gmail.com">nikiperetz10@gmail.com</a>
+                </p>
 
-                <form method="POST" action="#contact" class="contact-form">
+                <form id="contactForm" class="contact-form">
 
                     <label for="question">Jouw vraag</label>
 
@@ -411,7 +402,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         required></textarea>
 
                     <button type="submit" class="cta-button">
-                        Verstuur vraag →
+                        Open e-mailprogramma →
                     </button>
 
                 </form>

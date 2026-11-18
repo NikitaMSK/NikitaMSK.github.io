@@ -1,8 +1,3 @@
-
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -682,16 +677,6 @@ textarea {
 .contact-form .cta-button {
     align-self: flex-start;
 }
-
-.success-message {
-    background: #e2f7e6;
-    color: #17632b;
-    border: 1px solid #a8dfb2;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 20px;
-}
-
 
 /* =========================
    FOOTER

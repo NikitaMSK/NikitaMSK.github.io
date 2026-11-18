@@ -7,9 +7,9 @@ const projectData = {
 
         alt: "Developerland website met een takenlijst",
 
-        text: "Tijdens dit project leer je hoe je een moderne website maakt. Je werkt met HTML, CSS en PHP. Je leert ook hoe je een website responsive maakt voor mobiel en desktop.",
+        text: "Tijdens dit project leer je hoe je een moderne website maakt. Je werkt met HTML, CSS en JavaScript. Je leert ook hoe je een website responsive maakt voor mobiel en desktop.",
 
-        skills: ["HTML", "CSS", "PHP", "Responsive"]
+        skills: ["HTML", "CSS", "JavaScript", "Responsive"]
     },
 
     python: {
@@ -137,4 +137,35 @@ mainNav.querySelectorAll("a").forEach(link => {
 
     });
 
+});
+
+
+/* CONTACT FORM */
+
+const contactForm = document.getElementById("contactForm");
+const questionInput = document.getElementById("question");
+
+contactForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const question = questionInput.value.trim();
+
+    if (!question) {
+        questionInput.setCustomValidity("Vul eerst je vraag in.");
+        questionInput.reportValidity();
+        return;
+    }
+
+    questionInput.setCustomValidity("");
+
+    const subject = encodeURIComponent("Vraag over Software Development");
+    const body = encodeURIComponent(question);
+
+    window.location.href = `mailto:nikiperetz10@gmail.com?subject=${subject}&body=${body}`;
+
+});
+
+questionInput.addEventListener("input", () => {
+    questionInput.setCustomValidity("");
 });
