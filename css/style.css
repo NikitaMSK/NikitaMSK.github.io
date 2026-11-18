@@ -71,10 +71,22 @@ textarea {
     gap: 30px;
 }
 
-.logo img {
-    width: 105px;
-    height: auto;
-    object-fit: contain;
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-mark {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cyan);
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .nav {
@@ -140,7 +152,6 @@ textarea {
 }
 
 .section-heading h2,
-.sfeer-text h2,
 .contact-box h2 {
     font-size: clamp(28px, 4vw, 42px);
     line-height: 1.2;
@@ -148,8 +159,7 @@ textarea {
     margin-bottom: 20px;
 }
 
-.section-heading p,
-.sfeer-text p {
+.section-heading p {
     color: var(--muted);
     font-size: 17px;
 }
@@ -282,14 +292,11 @@ textarea {
 
 .code-content {
     padding: 35px 28px;
-    min-height: 300px;
     color: #f7f3fa;
     font-family: "Courier New", monospace;
-    font-size: 15px;
-}
-
-.code-content p {
-    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-x: auto;
 }
 
 .purple {
@@ -311,43 +318,6 @@ textarea {
 .pink {
     color: #ff9ecf;
 }
-
-.indent {
-    padding-left: 25px;
-}
-
-.indent-2 {
-    padding-left: 50px;
-}
-
-.code-line {
-    width: 85%;
-    height: 5px;
-    border-radius: 5px;
-    background: #51405e;
-    margin-top: 25px;
-}
-
-.code-line.short {
-    width: 55%;
-    margin-top: 12px;
-}
-
-.code-line.medium {
-    width: 70%;
-    margin-top: 12px;
-}
-
-.code-result {
-    background: #30213c;
-    border: 1px solid #584066;
-    color: #a9e88e;
-    border-radius: 6px;
-    padding: 12px;
-    margin-top: 25px;
-    font-size: 13px;
-}
-
 
 /* =========================
    FEATURE CARDS
@@ -498,23 +468,6 @@ textarea {
     box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
 }
 
-.modal-image {
-    width: 100%;
-    max-height: 280px;
-    object-fit: cover;
-
-    border-radius: 10px;
-
-    margin: 20px 0 25px;
-
-    display: block;
-
-    border: 1px solid var(--border);
-
-    background-color: var(--light);
-}
-
-
 .modal-close {
     position: absolute;
     top: 12px;
@@ -552,71 +505,8 @@ textarea {
     font-weight: bold;
 }
 
-
-/* =========================
-   SFEERIMPRESSIE
-========================= */
-
-.sfeer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.sfeer-text p {
-    margin-bottom: 20px;
-}
-
-.sfeer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.sfeer-item {
-    min-height: 180px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.sfeer-large {
-    grid-row: span 2;
-}
-
-.sfeer-art {
-    width: 100%;
-    height: 100%;
-    min-height: 180px;
-    background: #24182e;
-    color: white;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.sfeer-art span {
-    color: var(--cyan);
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.sfeer-art strong {
-    font-size: 28px;
-    margin-top: 5px;
-}
-
-.sfeer-art small {
-    color: #d6c9df;
-}
-
-.art-purple {
-    background: var(--purple);
-}
-
-.art-cyan {
-    background: #087c91;
+.modal-link {
+    margin-top: 25px;
 }
 
 
@@ -644,6 +534,19 @@ textarea {
 .contact-box p {
     color: var(--muted);
     margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin: 0 0 30px;
+}
+
+.contact-links a {
+    color: var(--purple);
+    font-weight: bold;
 }
 
 .contact-form {
@@ -694,11 +597,6 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-}
-
-.footer-logo {
-    width: 105px;
-    margin-bottom: 25px;
 }
 
 .footer-container h2 {
@@ -825,11 +723,6 @@ footer {
         padding-bottom: 65px;
     }
 
-    .sfeer {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
     .footer-container {
         flex-direction: column;
     }
@@ -871,18 +764,6 @@ footer {
 
     .modal-content {
         padding: 30px 25px;
-    }
-
-    .sfeer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sfeer-large {
-        grid-row: auto;
-    }
-
-    .sfeer-item {
-        min-height: 180px;
     }
 
 }

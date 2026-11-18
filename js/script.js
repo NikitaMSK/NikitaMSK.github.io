@@ -1,39 +1,29 @@
 
 const projectData = {
-    web: {
-        title: "Web Development",
-
-        image: "img/projects/web-development.png",
-
-        alt: "Developerland website met een takenlijst",
-
-        text: "Tijdens dit project leer je hoe je een moderne website maakt. Je werkt met HTML, CSS en JavaScript. Je leert ook hoe je een website responsive maakt voor mobiel en desktop.",
-
-        skills: ["HTML", "CSS", "JavaScript", "Responsive"]
+    sportcentrum: {
+        title: "Sportcentrum Webapplicatie",
+        text: "Een webapplicatie voor een sportcentrum, gebouwd met Laravel en Blade-templates. Het project gebruikt een database en besteedt aandacht aan veilig ontwikkelen.",
+        skills: ["Laravel", "PHP", "Blade", "Database", "Security"],
+        url: "https://github.com/NikitaMSK/sportcentrum_pra"
     },
-
-    python: {
-        title: "Python",
-        image:"img/projects/python.png",
-        alt: "Python programmeercode",
-        text: "Je leert programmeren met Python. Je werkt met variabelen, functies, loops en data. Je leert problemen oplossen door een programma stap voor stap te bouwen.",
-        skills: ["Python", "Functies", "Loops", "Data"]
+    "open-dag": {
+        title: "Curio Open Dag Website",
+        text: "Een responsive frontendproject voor de Curio Open Dag, gebouwd met HTML, CSS en JavaScript. Dit portfolio is zelf een doorontwikkeling van dat project.",
+        skills: ["HTML", "CSS", "JavaScript", "Responsive"],
+        url: "https://github.com/NikitaMSK/Open-Dag-Website"
     },
-
-    csharp: {
-        title: "C# & Applications",
-        image: "img/projects/csharp.png",
-        alt: "Csharp programmeercode",
-        text: "Je maakt een applicatie of game met C#. Je leert hoe je een interface bouwt, gebruikersinput verwerkt en verschillende functionaliteiten toevoegt.",
-        skills: ["C#", "WPF", "WinUI", "Applications"]
+    teamproject: {
+        title: "Teamproject Webapplicatie",
+        text: "Een webapplicatie ontwikkeld met PHP en MySQL. Samenwerken, taken afstemmen en code beheren met Git maakten deel uit van het project.",
+        skills: ["PHP", "MySQL", "Git", "Samenwerken"],
+        url: "https://github.com/NikitaMSK/nikta-rayan-finn-b2"
     },
-
-    database: {
-        title: "Databases",
-        image: "img/projects/database.jpg",
-        alt: "Database",
-        text: "Je leert gegevens opslaan en beheren in een database. Je ontdekt hoe programma's informatie kunnen opslaan, ophalen en gebruiken.",
-        skills: ["Databases", "SQL", "Data", "Backend"]
+    registratie: {
+        title: "Registratiesysteem",
+        text: "Een registratiesysteem in C# of Python dat backendlogica en algoritmisch denken laat zien.",
+        skills: ["C#", "Python", "Backend", "Algoritmes"],
+        url: "https://github.com/NikitaMSK?tab=repositories",
+        linkText: "Bekijk mijn GitHub →"
     }
 };
 
@@ -43,7 +33,7 @@ const modalTitle = document.getElementById("modalTitle");
 const modalText = document.getElementById("modalText");
 const modalSkills = document.getElementById("modalSkills");
 const modalClose = document.getElementById("modalClose");
-const modalImage = document.getElementById("modalImage");
+const modalLink = document.getElementById("modalLink");
 
 const projectButtons = document.querySelectorAll(".project-button");
 
@@ -60,9 +50,8 @@ projectButtons.forEach(button => {
 
         modalTitle.textContent = project.title;
         modalText.textContent = project.text;
-
-        modalImage.src = project.image;
-        modalImage.alt = project.alt;
+        modalLink.href = project.url;
+        modalLink.textContent = project.linkText || "Bekijk code op GitHub →";
 
         modalSkills.innerHTML = "";
 
@@ -141,12 +130,10 @@ mainNav.querySelectorAll("a").forEach(link => {
 
 
 /* CONTACT FORM */
-
 const contactForm = document.getElementById("contactForm");
 const questionInput = document.getElementById("question");
 
 contactForm.addEventListener("submit", event => {
-
     event.preventDefault();
 
     const question = questionInput.value.trim();
@@ -159,11 +146,10 @@ contactForm.addEventListener("submit", event => {
 
     questionInput.setCustomValidity("");
 
-    const subject = encodeURIComponent("Vraag over Software Development");
+    const subject = encodeURIComponent("Bericht via mijn portfolio");
     const body = encodeURIComponent(question);
 
     window.location.href = `mailto:nikiperetz10@gmail.com?subject=${subject}&body=${body}`;
-
 });
 
 questionInput.addEventListener("input", () => {
