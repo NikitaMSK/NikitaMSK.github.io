@@ -1,0 +1,463 @@
+<?php
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $message = "Bedankt! Je bericht is ontvangen.";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Software Development | Curio Open Dag</title>
+
+    <meta name="description" content="Ontdek de opleiding Software Development tijdens de Open Dag van Curio.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <img src="img/curioLogo.png" alt="Curio logo">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigatie" aria-expanded="false">
+
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <a href="#home" class="nav-btn">Home</a>
+                <a href="#opleiding" class="nav-btn">Opleiding</a>
+                <a href="#projecten" class="nav-btn">Projecten</a>
+                <a href="#sfeer" class="nav-btn">Sfeerimpressie</a>
+                <a href="#contact" class="nav-btn">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">OPEN DAG · CURIO</span>
+
+                    <h1>
+                        Bouw de toekomst met
+                        <span>Software Development.</span>
+                    </h1>
+
+                    <p>
+                        Ontdek hoe je websites, apps en slimme
+                        software maakt. Leer programmeren en werk
+                        aan projecten die jouw ideeën tot leven brengen.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#opleiding" class="cta-button">
+                            Ontdek de opleiding →
+                        </a>
+
+                        <a href="#projecten" class="secondary-button">
+                            Bekijk projecten
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="code-visual" aria-label="Illustratie van programmeren">
+
+                    <div class="code-window">
+
+                        <div class="window-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <small>software.php</small>
+                        </div>
+
+                        <div class="code-content">
+                            <p><span class="purple">class</span>
+                                <span class="cyan">Developer</span>
+                            </p>
+
+                            <p class="indent">
+                                <span class="purple">public function</span>
+                                <span class="yellow">create()</span>
+                            </p>
+
+                            <p class="indent-2">
+                                <span class="green">return</span>
+                                <span class="pink">"Your future";</span>
+                            </p>
+
+                            <p>}</p>
+
+                            <div class="code-line"></div>
+                            <div class="code-line short"></div>
+                            <div class="code-line medium"></div>
+
+                            <div class="code-result">
+                                <span>✓</span> Ready to build
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OPLEIDING -->
+
+        <section class="opleiding section" id="opleiding">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">WAT GA JE LEREN?</span>
+
+                <h2>Ontdek Software Development</h2>
+
+                <p>
+                    Tijdens de opleiding leer je hoe software wordt
+                    ontworpen, gebouwd en getest. Je werkt zelfstandig
+                    en samen aan verschillende projecten.
+                </p>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <div class="feature-icon">{"</>"}</div>
+                    <h3>Programmeren</h3>
+                    <p>
+                        Leer werken met programmeertalen zoals
+                        Python, PHP en C#.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Bouw moderne websites met HTML, CSS,
+                        JavaScript en PHP.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Projectmatig werken</h3>
+                    <p>
+                        Werk aan echte opdrachten met een team,
+                        planning en een Kanban-bord.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTEN -->
+
+        <section class="projects section" id="projecten">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">EERSTE JAAR</span>
+
+                <h2>Projecten tijdens de opleiding</h2>
+
+                <p>
+                    Van websites tot slimme programma's.
+                    Bekijk wat je kunt maken tijdens Software Development.
+                </p>
+
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+
+                    <div class="project-number">01</div>
+
+                    <div class="project-icon">🌐</div>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Maak een responsive website met HTML,
+                        CSS en PHP.
+                    </p>
+
+                    <button class="project-button" data-project="web">
+                        Meer informatie →
+                    </button>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">02</div>
+
+                    <div class="project-icon">🐍</div>
+
+                    <h3>Python</h3>
+
+                    <p>
+                        Leer programmeren met variabelen,
+                        functies, loops en data.
+                    </p>
+
+                    <button class="project-button" data-project="python">
+                        Meer informatie →
+                    </button>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">03</div>
+
+                    <div class="project-icon">🎮</div>
+
+                    <h3>C# & Applications</h3>
+
+                    <p>
+                        Bouw een applicatie of game met
+                        C# en een grafische interface.
+                    </p>
+
+                    <button class="project-button" data-project="csharp">
+                        Meer informatie →
+                    </button>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">04</div>
+
+                    <div class="project-icon">🗄️</div>
+
+                    <h3>Databases</h3>
+
+                    <p>
+                        Leer hoe je gegevens opslaat,
+                        beheert en gebruikt in een programma.
+                    </p>
+
+                    <button class="project-button" data-project="database">
+                        Meer informatie →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- POP-UP -->
+
+        <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+            <div class="modal-content">
+
+                <button class="modal-close" id="modalClose" aria-label="Sluit venster">
+                    x
+                </button>
+
+                <span class="eyebrow">PROJECT INFORMATIE</span>
+
+                <!-- Afbeelding van het project -->
+                <img id="modalImage" class="modal-image" src="img/projects/web-development.png"
+                    alt="Voorbeeld van een webdevelopment project">
+
+                <h2 id="modalTitle">Project</h2>
+
+                <p id="modalText"></p>
+
+                <div class="modal-skills" id="modalSkills"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SFEERIMPRESSIE -->
+
+        <section class="sfeer section" id="sfeer">
+
+            <div class="sfeer-text">
+
+                <span class="eyebrow">SFEERIMPRESSIE</span>
+
+                <h2>Een opleiding vol creativiteit en techniek.</h2>
+
+                <p>
+                    Ontdek de wereld van software development.
+                    Tijdens de opleiding werk je aan verschillende
+                    opdrachten en leer je nieuwe technieken.
+                </p>
+
+                <p>
+                    Je leert niet alleen programmeren, maar ook
+                    samenwerken, problemen oplossen en je eigen
+                    ideeën uitwerken.
+                </p>
+
+            </div>
+
+            <div class="sfeer-grid">
+
+
+
+                <!-- Grote foto -->
+                <div class="sfeer-item sfeer-large">
+
+                    <img src="img/projects/web-development.png" alt="Voorbeeld van een website">
+
+                    <div class="sfeer-overlay">
+                        <span>01</span>
+                        <strong>Web Development</strong>
+                        <small>Build your ideas</small>
+                    </div>
+
+                </div>
+
+
+                <!-- Foto 2 -->
+                <div class="sfeer-item">
+
+                    <img src="img/projects/python.png" alt="Python programmeren">
+
+                    <div class="sfeer-overlay">
+                        <span>02</span>
+                        <strong>Programming</strong>
+                        <small>Learn new skills</small>
+                    </div>
+
+                </div>
+
+
+                <!-- Foto 3 -->
+                <div class="sfeer-item">
+
+                    <img src="img/projects/csharp.png" alt="C# applicatie">
+
+                    <div class="sfeer-overlay">
+                        <span>03</span>
+                        <strong>Projects</strong>
+                        <small>Work together</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="contact section" id="contact">
+
+            <div class="contact-box">
+
+                <span class="eyebrow">OPEN DAG</span>
+
+                <h2>Heb je vragen over de opleiding?</h2>
+
+                <p>
+                    Wil je meer weten over Software Development?
+                    Laat een bericht achter.
+                </p>
+
+                <?php if ($message !== ""): ?>
+                    <div class="success-message">
+                        <?= htmlspecialchars($message) ?>
+                    </div>
+                <?php endif; ?>
+
+                <form method="POST" action="#contact" class="contact-form">
+
+                    <label for="question">Jouw vraag</label>
+
+                    <textarea id="question" name="question" rows="4" placeholder="Typ hier je vraag..."
+                        required></textarea>
+
+                    <button type="submit" class="cta-button">
+                        Verstuur vraag →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <img src="img/curioLogo.png" alt="Curio logo" class="footer-logo">
+
+                <h2>Software Development</h2>
+
+                <p>
+                    2026 Open Dag
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#opleiding">Opleiding</a>
+                <a href="#projecten">Projecten</a>
+                <a href="#sfeer">Sfeerimpressie</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>©2026 Made by Nikita Moskalenko </p>
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
